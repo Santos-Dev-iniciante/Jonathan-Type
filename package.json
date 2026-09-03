@@ -19,5 +19,8 @@
   "homepage": "https://github.com/wendy-dev-byte/ListaTypeScript#readme",
   "devDependencies": {
     "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "typecript": "^0.0.1-security"
   }
 }

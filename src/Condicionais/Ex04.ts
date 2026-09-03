@@ -3,8 +3,8 @@
 // ● ‘Primeiro é maior’, caso o primeiro seja maior que o segundo;
 // ● ‘Segundo maior’, caso o segundo seja maior que o primeiro.
 
-let numero1 :number = Number(prompt("Informe o primeiro número! "))
-let numero2 :number = Number(prompt("Informe o segundo número! "))
+let num1 :number = Number(prompt("Informe o primeiro número! "))
+let num2 :number = Number(prompt("Informe o segundo número! "))
 
 if(num1 == num2){
     alert("Números iguais!")
