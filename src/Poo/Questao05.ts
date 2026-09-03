@@ -45,7 +45,7 @@ console.log("Depois de envelhecer:")
 console.log("Idade:", pessoa.idade)
 console.log("Altura:", pessoa.altura)
 
-pessoa.engordar(2)
+pessoa.engordar(2)  
 console.log("Peso depois de engordar:", pessoa.peso)
 
 pessoa.emagrecer(1)
