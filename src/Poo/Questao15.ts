@@ -49,4 +49,4 @@ let salario: number = Number(prompt("Salário mensal: "))
 let assalariado = new FuncionarioAssalariado(nome2, salario)
 
 console.log(`Nome: ${assalariado.nome}`)
-console.log(`Salário:  R$ ${assalariado.calcularSalario()}`)
+console.log(`Salário: R$ ${assalariado.calcularSalario()}`)
