@@ -1,62 +1,41 @@
-class Livro {
-    private titulo: string
-    private autor: string
-    private ano: number
-    private disponivel: boolean
+class Livro{
 
-    constructor(titulo: string, autor: string, ano: number) {
-        this.titulo = titulo
-        this.autor = autor
-        this.ano = ano
-        this.disponivel = true
+    private _titulo: string
+    public get titulo(): string {
+        return this._titulo
+    }
+    public set titulo(value: string) {
+        this._titulo = value
     }
 
-    mostrar(): void {
-        console.log(`Título: ${this.titulo}`)
-        console.log(`Autor: ${this.autor}`)
-        console.log(`Ano: ${this.ano}`)
-        console.log(`Disponível: ${this.disponivel}`)
+    private _autor: string
+    public get autor(): string {
+        return this._autor
+    }
+    public set autor(value: string) {
+        this._autor = value
     }
 
-    emprestar(): void {
-        this.disponivel = false
+    private _anoPublicacao: number
+    public get anoPublicacao(): number {
+        return this._anoPublicacao
+    }
+    public set anoPublicacao(value: number) {
+        this._anoPublicacao = value
+    }
+    
+    private _disponilibilidade: boolean
+    public get disponilibilidade(): boolean {
+        return this._disponilibilidade
+    }
+    public set disponilibilidade(value: boolean) {
+        this._disponilibilidade = value
     }
 
-    getTitulo(): string {
-        return this.titulo
-    }
-
-    getDisponivel(): boolean {
-        return this.disponivel
-    }
-}
-
-let livros: Livro[] = []
-
-for (let i = 0; i < 15; i++) {
-
-    let titulo = String(prompt("Título: "))
-    let autor = String(prompt("Autor: "))
-    let ano = Number(prompt("Ano de publicação: "))
-
-    let livro = new Livro(titulo, autor, ano)
-
-    livros.push(livro)
-}
-
-console.log("=== LIVROS DISPONÍVEIS ===")
-
-for (let livro of livros) {
-    if (livro.getDisponivel()) {
-        livro.mostrar()
-    }
-}
-
-let pesquisa = String(prompt("Digite o título do livro que deseja emprestar: "))
-
-for (let livro of livros) {
-    if (livro.getTitulo() == pesquisa) {
-        livro.emprestar()
-        console.log("Livro emprestado com sucesso!")
-    }
+        constructor(titulo: string, autor: string, anoPublicacao: number, disponibilidade: boolean){
+            this._titulo = titulo
+            this._autor = autor
+            this._anoPublicacao = anoPublicacao
+            this._disponilibilidade = disponibilidade                             
+        }
 }
